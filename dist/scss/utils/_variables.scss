@@ -1,21 +1,18 @@
 //new
 $white: #fff;
 $black: #000;
-$blue: #51ADE5;
+$blue: #51ade5;
 
-$primary: #B8DDFF;
-$secondary: #414B54;
-$tertiary: #F57343;
-$grey-dark: #D9D9D9;
-$grey-light: #F8F8F8;
-
-
-
+$primary: #14131b;
+$secondary: #ffc426;
+$tertiary: #f57343;
+$grey-dark: #d9d9d9;
+$grey-light: #f8f8f8;
 
 /* reset */
 $container-indents-x: 15px;
 $min-width: 320px;
-$max-width: 1180px; // 1140 + 20 + 20
+$max-width: 1170px; // 1140 + 20 + 20
 $base-bg: $grey-light;
 
 $base-font-size: 18px;
@@ -25,7 +22,6 @@ $regular: "avenir-next-regular", sans-serif;
 
 $base-regular-font-family: $regular; // USED
 
-
 $default-transition: all 0.2s linear;
 
 /* main variables */
@@ -34,7 +30,6 @@ $link-color: $secondary;
 //text, titles
 $base-text-color: $secondary;
 $secondary-text-color: $white;
-
 
 $font-size-h1: 32px;
 $font-size-h2: 24px;

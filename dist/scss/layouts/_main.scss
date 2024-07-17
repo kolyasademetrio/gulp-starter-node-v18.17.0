@@ -26,6 +26,7 @@ a {
 
 p {
   font-size: $font-size-p;
+  text-transform: none;
 }
 
 h1 {
@@ -83,4 +84,803 @@ img {
 .content {
   flex-shrink: 1;
   flex-grow: 1;
+}
+
+.color-white {
+  color: $white;
+}
+
+.color-primary {
+  color: $primary;
+}
+
+.color-secondary {
+  color: $secondary;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 0 0 20px;
+
+  @media screen and (max-width: $tablet-media) {
+    font-size: 32px;
+  }
+}
+
+.btn {
+  background-color: $secondary;
+  color: $primary;
+  border-radius: 10px;
+  padding: 15px 60px;
+  line-height: 1.1;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  text-transform: uppercase;
+  border: 1px solid $secondary;
+
+  @media screen and (max-width: $tablet-media) {
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+
+  &-secondary {
+    background-color: transparent;
+    text-transform: none;
+    border: 1px solid $primary;
+    font-weight: 700;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+
+    @media screen and (max-width: $tablet-media) {
+      padding-top: 9px;
+      padding-bottom: 9px;
+    }
+  }
+
+  &-tertiary {
+    background-color: transparent;
+    text-transform: none;
+    border: 1px solid $white;
+    color: $white;
+    font-weight: 700;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+
+    @media screen and (max-width: $tablet-media) {
+      padding-top: 9px;
+      padding-bottom: 9px;
+    }
+  }
+}
+
+.slick-arrow {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.hero {
+  position: relative;
+  background: url("../images/hero.jpg") center center no-repeat;
+  background-size: cover;
+  padding: 235px 0 248px;
+
+  @media screen and (max-width: $tablet-media) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50%;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+
+    @media screen and (max-width: $tablet-media) {
+      width: 100%;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__innerItem {
+    width: 50%;
+    padding: 0 15px 0 0;
+
+    @media screen and (max-width: $tablet-media) {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+
+  &__title {
+    font-size: 80px;
+    font-weight: 700;
+    color: $secondary;
+    line-height: 1.2;
+    padding: 0 0 20px;
+    text-transform: uppercase;
+
+    @media screen and (max-width: $desktop-media) {
+      font-size: 65px;
+    }
+
+    @media screen and (max-width: $tablet-media) {
+      font-size: 36px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__text {
+    color: $primary;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 0 0 50px;
+    text-transform: none;
+
+    @media screen and (max-width: $tablet-media) {
+      font-size: 16px;
+
+      padding-bottom: 60px;
+    }
+  }
+
+  &__btnWrap {
+    display: flex;
+    justify-content: flex-start;
+
+    @media screen and (max-width: $tablet-media) {
+      justify-content: center;
+    }
+  }
+
+  &__btn {
+  }
+}
+
+.aboutus {
+  padding: 100px 0 120px;
+
+  @media screen and (max-width: $tablet-media) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: $tablet-media) {
+      flex-direction: column;
+      gap: 35px;
+    }
+  }
+
+  &__innerItem {
+    &.m-primary {
+      width: calc(50% + 15px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @media screen and (max-width: $tablet-media) {
+        order: 2;
+        width: 100%;
+      }
+    }
+
+    &.m-secondary {
+      width: calc(50% - 15px);
+      padding-left: 55px;
+      display: flex;
+      justify-content: center;
+
+      @media screen and (max-width: $tablet-media) {
+        order: 1;
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__title {
+    color: $secondary;
+
+    @media screen and (max-width: $tablet-media) {
+      font-size: 36px;
+      padding-bottom: 25px;
+    }
+  }
+
+  &__text {
+    color: $primary;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 0 30px;
+    text-transform: none;
+
+    @media screen and (max-width: $tablet-media) {
+      font-size: 16px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__btnWrap {
+    display: flex;
+    justify-content: flex-start;
+
+    @media screen and (max-width: $tablet-media) {
+    }
+  }
+
+  &__imgWrap {
+    max-width: 430px;
+
+    @media screen and (max-width: $tablet-media) {
+      max-width: 210px;
+    }
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.ourexpertise {
+  &__container {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+
+    @media screen and (max-width: $tablet-media) {
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: $tablet-media) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__innerItem {
+    width: 50%;
+
+    @media screen and (max-width: $tablet-media) {
+      width: 100%;
+    }
+
+    &.m-primary {
+      background: url("../images/our-expertise.jpg") center center no-repeat;
+      background-size: cover;
+
+      @media screen and (max-width: $tablet-media) {
+        height: 500px;
+      }
+
+      @media screen and (max-width: $mobile-media) {
+        height: 320px;
+      }
+    }
+    &.m-secondary {
+      padding: 60px 0 60px 45px;
+      background: rgb(250, 250, 250);
+      background: linear-gradient(
+        90deg,
+        rgba(250, 250, 250, 1) 0%,
+        rgba(141, 141, 141, 1) 84%
+      );
+
+      > * {
+        max-width: 500px;
+
+        @media screen and (max-width: $tablet-media) {
+          max-width: 100%;
+        }
+      }
+
+      @media screen and (max-width: $tablet-media) {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
+
+  &__title {
+    padding-bottom: 10px;
+  }
+
+  &__text {
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: none;
+    color: $primary;
+    padding: 0 0 34px;
+
+    @media screen and (max-width: $tablet-media) {
+      font-size: 20px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__list {
+    padding: 0 0 40px;
+  }
+
+  &__listItem {
+    color: $primary;
+    padding: 0 0 20px;
+    margin-left: 18px;
+    position: relative;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      width: 36px;
+      height: 13px;
+      display: block;
+      background: rgb(186, 186, 186);
+      background: linear-gradient(
+        90deg,
+        rgba(186, 186, 186, 1) 0%,
+        rgba(169, 169, 169, 1) 50%
+      );
+      position: absolute;
+      z-index: 0;
+      left: -18px;
+      top: 10px;
+    }
+  }
+
+  &__listItemTitle {
+    color: $primary;
+    font-size: 22px;
+    font-weight: 600;
+    z-index: 1;
+    position: relative;
+  }
+
+  &__listItemText {
+    color: $primary;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: none;
+    z-index: 1;
+    position: relative;
+  }
+
+  &__btnWrap {
+  }
+
+  &__btn {
+  }
+}
+
+.formSection {
+  padding: 120px 0;
+
+  @media screen and (max-width: $tablet-media) {
+    padding: 80px 0;
+  }
+
+  .formSection__inner {
+  }
+
+  .formSection__innerItem {
+    background-color: $secondary;
+    padding: 60px 192px;
+
+    @media screen and (max-width: $tablet-media) {
+      padding-left: 26px;
+      padding-right: 26px;
+    }
+  }
+
+  .formSection__title {
+    text-align: center;
+
+    @media screen and (max-width: $tablet-media) {
+      padding-bottom: 20px;
+    }
+  }
+
+  .formSection__text {
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    color: $primary;
+    padding: 0 0 40px;
+
+    @media screen and (max-width: $tablet-media) {
+      font-size: 18px;
+      padding-bottom: 30px;
+    }
+  }
+
+  .formSection__formWrap {
+    background-color: $white;
+    padding: 24px 10px;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: $tablet-media) {
+      padding-top: 26px;
+      padding-bottom: 30px;
+    }
+  }
+
+  .formSection__formInner {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 530px;
+
+    @media screen and (max-width: $tablet-media) {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  }
+
+  .formSection__formField {
+    &.m-primary {
+      flex-grow: 1;
+      flex-shrink: 0;
+      width: 271px;
+      display: flex;
+
+      @media screen and (max-width: $tablet-media) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    &.m-secondary {
+      flex-shrink: 0;
+
+      @media screen and (max-width: $tablet-media) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    input {
+      width: 100%;
+      border: none;
+      background-color: transparent;
+      color: $black;
+      font-size: 34px;
+      font-weight: 400;
+
+      @media screen and (max-width: $tablet-media) {
+        font-size: 24px;
+        width: 200px;
+      }
+    }
+  }
+
+  .formSection__btn {
+    white-space: nowrap;
+  }
+}
+
+.ourClients {
+  background-color: $primary;
+  padding: 80px 0;
+
+  @media screen and (max-width: $tablet-media) {
+    padding: 60px 0;
+  }
+
+  &__inner {
+  }
+
+  &__innerItem {
+  }
+
+  &__title {
+    padding-bottom: 40px;
+  }
+
+  &__sliderWrap {
+  }
+
+  &__slider {
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+
+    .slick-prev {
+      position: absolute;
+      left: -40px;
+      top: calc(50% - 10px);
+      z-index: 1;
+
+      @media screen and (max-width: $desktop-media) {
+        left: 20px;
+      }
+    }
+
+    .slick-next {
+      position: absolute;
+      right: -40px;
+      top: calc(50% - 10px);
+      z-index: 1;
+
+      @media screen and (max-width: $desktop-media) {
+        right: 20px;
+      }
+    }
+  }
+
+  &__slide {
+    padding: 0 15px;
+    cursor: pointer;
+
+    &:hover {
+      .ourClients__slideContent {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__slideInner {
+    overflow: hidden;
+    position: relative;
+    height: 420px;
+
+    @media screen and (max-width: $tablet-media) {
+      height: auto;
+    }
+  }
+
+  &__slideImgWrap {
+    @media screen and (max-width: $tablet-media) {
+      position: relative;
+      height: 200px;
+    }
+  }
+
+  &__slideImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__slideContent {
+    position: absolute;
+    z-index: 1;
+    top: 120px;
+    left: 100px;
+    right: 100px;
+    bottom: 120px;
+    border: 3px solid $secondary;
+    padding: 30px;
+    display: flex;
+    align-items: flex-end;
+    opacity: 0;
+    transition: all 0.6s ease 0s;
+
+    @media screen and (max-width: $tablet-media) {
+      position: static;
+      padding: 20px;
+      opacity: 1;
+    }
+  }
+
+  &__slideText {
+    color: $white;
+    font-weight: 700;
+    font-size: 22px;
+
+    @media screen and (max-width: $tablet-media) {
+      font-size: 18px;
+    }
+  }
+
+  &__btnWrap {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0 0;
+
+    @media screen and (max-width: $tablet-media) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__btn {
+  }
+}
+
+.grid {
+  background: rgb(250, 250, 250);
+  background: linear-gradient(
+    90deg,
+    rgba(250, 250, 250, 1) 0%,
+    rgba(141, 141, 141, 1) 87%
+  );
+  padding: 60px 0 40px;
+
+  &__inner {
+  }
+
+  &__innerItem {
+  }
+
+  &__title {
+    color: $primary;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 0 0 40px;
+  }
+
+  &__list {
+    display: flex;
+    margin: 0 -10px;
+    flex-wrap: wrap;
+  }
+
+  &__listItem {
+    padding: 0 10px 20px;
+    width: 25%;
+
+    @media screen and (max-width: $tablet-media) {
+      width: 50%;
+    }
+
+    @media screen and (max-width: $mobile-media) {
+      width: 100%;
+    }
+  }
+
+  &__listItemInner {
+    border: 2px solid #8a8a8a;
+    padding: 30px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+
+    @media screen and (max-width: $tablet-media) {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+  }
+
+  &__listItemHeader {
+    color: $secondary;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1;
+    padding: 0 0 40px;
+
+    @media screen and (max-width: $tablet-media) {
+      padding-bottom: 15px;
+    }
+  }
+
+  &__listItemContent {
+  }
+
+  &__listItemTitle {
+    color: $primary;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1.2;
+    padding: 0 0 10px;
+
+    @media screen and (max-width: $tablet-media) {
+      font-size: 20px;
+      padding-bottom: 15px;
+    }
+  }
+
+  &__listItemText {
+  }
+
+  &__listItemParagraph {
+    color: $primary;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+}
+
+.safetyfirst {
+  padding: 130px 0 100px;
+
+  @media screen and (max-width: $tablet-media) {
+    padding-top: 90px;
+    padding-bottom: 80px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 130px;
+
+    @media screen and (max-width: $tablet-media) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__innerItem {
+    &.m-primary {
+      @media screen and (max-width: $tablet-media) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    &.m-secondary {
+      flex-grow: 1;
+      padding-top: 30px;
+
+      @media screen and (max-width: $tablet-media) {
+        width: 100%;
+        padding-top: 0;
+      }
+    }
+  }
+
+  &__imgWrap {
+    max-width: 350px;
+    width: 350px;
+    margin: 0 0 0 50px;
+
+    @media screen and (max-width: $tablet-media) {
+      margin: 0;
+      width: 220px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    display: block;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+
+    @media screen and (max-width: $tablet-media) {
+      font-size: 32px;
+    }
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 22px;
+    color: $primary;
+
+    @media screen and (max-width: $tablet-media) {
+      font-size: 20px;
+    }
+  }
 }
